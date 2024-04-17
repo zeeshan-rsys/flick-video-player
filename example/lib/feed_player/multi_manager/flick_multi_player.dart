@@ -29,8 +29,9 @@ class _FlickMultiPlayerState extends State<FlickMultiPlayer> {
   @override
   void initState() {
     flickManager = FlickManager(
-      videoPlayerController: VideoPlayerController.networkUrl(Uri.parse(widget.url))
-        ..setLooping(true),
+      videoPlayerController:
+          VideoPlayerController.networkUrl(Uri.parse(widget.url))
+            ..setLooping(true),
       autoPlay: false,
     );
     widget.flickMultiManager.init(flickManager);
@@ -66,9 +67,8 @@ class _FlickMultiPlayerState extends State<FlickMultiPlayer> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  Positioned(
-                    right: 10,
-                    top: 10,
+                  Align(
+                    alignment: Alignment.center,
                     child: Container(
                       width: 20,
                       height: 20,
